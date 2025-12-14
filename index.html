@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Meta -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Premium Bookings Webpage for coaches, fitness, and business professionals.">
+  <meta name="author" content="WebSync360">
+
+  <!-- Page Title -->
+  <title>FitCoach Bookings Webpage</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://via.placeholder.com/32x32.png?text=F" type="image/png">
+
+  <!-- Google Fonts (Inter) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS compiled file -->
+  <link href="dist/output.css" rel="stylesheet"> <!-- Adjust path to your compiled CSS -->
+
+  <!-- Heroicons (SVG icons) -->
+  <script src="https://unpkg.com/heroicons@2.0.13/dist/heroicons.min.js" defer></script>
+
+  <!-- Animate.css (Optional for premium animations) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <!-- Open Graph / Social Preview -->
+  <meta property="og:title" content="FitCoach Pro Dashboard">
+  <meta property="og:description" content="Professional, premium dashboard for coaches and fitness professionals.">
+  <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=FitCoach+Preview">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FitCoach Pro Dashboard">
+  <meta name="twitter:description" content="Professional, premium dashboard for coaches and fitness professionals.">
+  <meta name="twitter:image" content="https://via.placeholder.com/1200x630.png?text=FitCoach+Preview">
+
+  <!-- Optional: Normalize CSS (Extra browser consistency) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+</head>
+
+<body>
+
+<!-- Header -->
+<header
+  id="site-header"
+  class="fixed top-0 left-0 w-full z-50 bg-transparent transition-transform duration-350"
+>
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+    <!-- Logo / Name Badge -->
+    <div class="flex items-center gap-3 bg-brand-50 rounded-full px-4 py-2">
+      <div class="w-8 h-8 rounded-full bg-brand-500 flex items-center justify-center text-white text-sm font-bold">
+        FS
+      </div>
+      <span class="text-brand-700 font-semibold tracking-wide">
+        FitSync360
+      </span>
+    </div>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex items-center gap-8 text-brand-50 font-medium">
+      <a href="#about" class="hover:opacity-80 transition">About</a>
+      <a href="#sessions" class="hover:opacity-80 transition">Sessions</a>
+      <a href="#booking" class="hover:opacity-80 transition">Book a Session</a>
+      <a href="#contact" class="hover:opacity-80 transition">Contact</a>
+
+      <a
+        href="#booking"
+        class="ml-4 bg-brand-50 text-brand-700 px-6 py-2 rounded-full font-semibold hover:bg-gray-100 transition"
+      >
+        Book Now
+      </a>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <button
+      id="menu-btn"
+      class="md:hidden text-brand-50 text-2xl focus:outline-none"
+    >
+      ☰
+    </button>
+  </div>
+</header>
+
+<!-- Hero -->
+<section
+  id="home"
+  class="relative rounded-b-[2.5rem] overflow-hidden"
+>
+  <!-- Background Image with Overlay -->
+  <div class="absolute inset-0">
+    <img
+      src="https://avatars.mds.yandex.net/i?id=5893a0bf91ab1e96efa67c6597d09798-5538784-images-thumbs&n=13"
+      alt="Fitness Background"
+      class="w-full h-full object-cover opacity-50"
+    />
+    <div class="absolute inset-0 bg-black/50"></div> <!-- Dull overlay for readability -->
+  </div>
+
+  <div class="relative max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 pt-28 pb-24">
+
+    <!-- Left Content -->
+    <div class="text-brand-50 text-center md:text-left">
+      <span class="uppercase tracking-widest text-sm opacity-90">
+        Professional Fitness Coaching & Booking
+      </span>
+
+      <h1 class="mt-4 text-4xl md:text-5xl xl:text-6xl font-bold leading-tight text-brand-50">
+        Book Your Session, <br />
+        Stay Accountable, <br />
+        Achieve Results
+      </h1>
+
+      <p class="mt-6 text-lg opacity-90 max-w-xl mx-auto md:mx-0">
+        Choose your preferred session, pick a time, and secure your spot with our elite coaches. Designed for professionals who want real results.
+      </p>
+
+      <!-- Authority / Trust -->
+      <div class="mt-8 flex flex-wrap justify-center md:justify-start gap-8 text-sm opacity-90">
+        <div>
+          <span class="block text-2xl font-bold text-brand-50">10+</span>
+          Years Experience
+        </div>
+        <div>
+          <span class="block text-2xl font-bold text-brand-50">500+</span>
+          Clients Trained
+        </div>
+        <div>
+          <span class="block text-2xl font-bold text-brand-50">95%</span>
+          Success Rate
+        </div>
+      </div>
+
+      <!-- CTAs -->
+      <div class="mt-10 flex flex-wrap justify-center md:justify-start gap-4">
+        <a
+          href="#booking"
+          class="bg-brand-50 text-brand-700 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition"
+        >
+          Book Your Session
+        </a>
+        <a
+          href="#sessions"
+          class="border border-brand-50/40 px-8 py-3 rounded-full font-medium hover:bg-brand-50/10 transition"
+        >
+          View Sessions
+        </a>
+      </div>
+    </div>
+
+    <!-- Right Calendar Visual -->
+    <div class="flex items-start md:items-center justify-center md:justify-end">
+      <div class="w-full max-w-sm md:max-w-md h-[400px] md:h-[480px] rounded-3xl overflow-hidden shadow-2xl bg-brand-50 flex items-center justify-center">
+        <!-- Placeholder for Calendar/Booking visual -->
+        <span class="text-brand-700 font-semibold">[Calendar / Booking Visual Here]</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+  
+
+<script src="src/script.js"></script> <!-- Adjust path to your compiled JS -->
+</body>
+</html>
