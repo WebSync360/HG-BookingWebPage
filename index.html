@@ -43,125 +43,217 @@
 
 <body>
 
-<!-- Header -->
+<!-- Premium Glass Header -->
 <header
   id="site-header"
-  class="fixed top-0 left-0 w-full z-50 bg-transparent transition-transform duration-350"
+  class="fixed top-0 left-0 w-full z-50 bg-white/2 backdrop-blur-md border-b border-white/10"
 >
   <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
-    <!-- Logo / Name Badge -->
-    <div class="flex items-center gap-3 bg-brand-50 rounded-full px-4 py-2">
-      <div class="w-8 h-8 rounded-full bg-brand-500 flex items-center justify-center text-white text-sm font-bold">
-        FS
+    <!-- Brand -->
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-xl bg-brand-500 flex items-center justify-center text-white font-bold">
+        FP
       </div>
-      <span class="text-brand-700 font-semibold tracking-wide">
-        FitSync360
-      </span>
+      <div class="leading-tight">
+        <p class="text-brand-50 font-semibold">FitPedio360</p>
+        <p class="text-xs text-brand-50/70">Elite Coaching Platform</p>
+      </div>
     </div>
 
-    <!-- Desktop Nav -->
-    <nav class="hidden md:flex items-center gap-8 text-brand-50 font-medium">
-      <a href="#about" class="hover:opacity-80 transition">About</a>
-      <a href="#sessions" class="hover:opacity-80 transition">Sessions</a>
-      <a href="#booking" class="hover:opacity-80 transition">Book a Session</a>
-      <a href="#contact" class="hover:opacity-80 transition">Contact</a>
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex items-center gap-14 text-sm font-medium text-brand-50/80">
+      <a href="#sessions" class="hover:text-white transition">Sessions</a>
+      <a href="#process" class="hover:text-white transition">How It Works</a>
+      <a href="#coach" class="hover:text-white transition">Coach</a>
+      <a href="#contact" class="hover:text-white transition">Contact</a>
 
       <a
         href="#booking"
-        class="ml-4 bg-brand-50 text-brand-700 px-6 py-2 rounded-full font-semibold hover:bg-gray-100 transition"
+        class="ml-2 bg-brand-50 text-brand-700 px-6 py-2.5 rounded-full font-semibold shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition"
       >
-        Book Now
+        Book Session
       </a>
     </nav>
 
-    <!-- Mobile Menu Button -->
-    <button
-      id="menu-btn"
-      class="md:hidden text-brand-50 text-2xl focus:outline-none"
-    >
+    <!-- Mobile Toggle -->
+    <button class="md:hidden text-brand-50 text-2xl">
       ☰
     </button>
   </div>
 </header>
 
-<!-- Hero -->
+<!-- Mobile Menu -->
+<div
+  id="mobile-menu"
+  class="fixed inset-0 bg-brand-700/95 backdrop-blur-lg z-40
+         hidden flex-col items-center justify-center
+         text-brand-50 text-lg space-y-8 transition-opacity"
+>
+  <a href="#about" class="hover:opacity-80">About</a>
+  <a href="#sessions" class="hover:opacity-80">Sessions</a>
+  <a href="#booking" class="hover:opacity-80">Book a Session</a>
+  <a href="#contact" class="hover:opacity-80">Contact</a>
+
+  <a
+    href="#booking"
+    class="mt-6 bg-brand-50 text-brand-700 px-8 py-3 rounded-full font-semibold"
+  >
+    Book Now
+  </a>
+</div>
+
 <section
   id="home"
-  class="relative rounded-b-[2.5rem] overflow-hidden"
+  class="relative min-h-[100svh] overflow-hidden flex items-center"
 >
-  <!-- Background Image with Overlay -->
+  <!-- Background -->
   <div class="absolute inset-0">
     <img
       src="https://avatars.mds.yandex.net/i?id=5893a0bf91ab1e96efa67c6597d09798-5538784-images-thumbs&n=13"
-      alt="Fitness Background"
-      class="w-full h-full object-cover opacity-50"
+      alt="Elite Training Background"
+      class="w-full h-full object-cover opacity-70"
     />
-    <div class="absolute inset-0 bg-black/50"></div> <!-- Dull overlay for readability -->
+    <div class="absolute inset-0 bg-gradient-to-br from-brand-700/90 via-brand-500/85 to-black/90"></div>
   </div>
 
-  <div class="relative max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 pt-28 pb-24">
+  <!-- Content Wrapper -->
+  <div
+    class="relative max-w-7xl mx-auto px-6
+           pt-[calc(4.5rem+2vh)]
+           pb-16
+           grid grid-cols-1 lg:grid-cols-2
+           gap-12
+           w-full
+           items-center"
+  >
 
-    <!-- Left Content -->
-    <div class="text-brand-50 text-center md:text-left">
-      <span class="uppercase tracking-widest text-sm opacity-90">
-        Professional Fitness Coaching & Booking
+    <!-- LEFT: Messaging -->
+    <div
+      class="min-h-[520px] flex flex-col justify-center
+             text-brand-50 space-y-7
+             text-center lg:text-left"
+    >
+      <span
+        class="mx-auto lg:mx-0 w-fit text-xs tracking-widest uppercase
+               bg-white/10 px-4 py-2 rounded-full backdrop-blur"
+      >
+        Appointment-Based Elite Coaching
       </span>
 
-      <h1 class="mt-4 text-4xl md:text-5xl xl:text-6xl font-bold leading-tight text-brand-50">
-        Book Your Session, <br />
-        Stay Accountable, <br />
-        Achieve Results
+      <h1 class="text-4xl md:text-5xl xl:text-6xl font-extrabold leading-tight">
+        Precision Training.<br />
+        Structured Booking.<br />
+        Measurable Results.
       </h1>
 
-      <p class="mt-6 text-lg opacity-90 max-w-xl mx-auto md:mx-0">
-        Choose your preferred session, pick a time, and secure your spot with our elite coaches. Designed for professionals who want real results.
+      <p class="text-lg text-brand-50/80 max-w-xl mx-auto lg:mx-0">
+        A high performance booking system for professionals who treat fitness like
+        an investment, not a hobby.
       </p>
 
-      <!-- Authority / Trust -->
-      <div class="mt-8 flex flex-wrap justify-center md:justify-start gap-8 text-sm opacity-90">
-        <div>
-          <span class="block text-2xl font-bold text-brand-50">10+</span>
-          Years Experience
-        </div>
-        <div>
-          <span class="block text-2xl font-bold text-brand-50">500+</span>
-          Clients Trained
-        </div>
-        <div>
-          <span class="block text-2xl font-bold text-brand-50">95%</span>
-          Success Rate
-        </div>
-      </div>
-
-      <!-- CTAs -->
-      <div class="mt-10 flex flex-wrap justify-center md:justify-start gap-4">
+      <!-- Actions -->
+      <div class="flex flex-wrap justify-center lg:justify-start gap-4 pt-2">
         <a
           href="#booking"
-          class="bg-brand-50 text-brand-700 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition"
+          class="bg-brand-50 text-brand-700 px-8 py-4 rounded-full font-semibold shadow-xl hover:scale-[1.02] transition"
         >
-          Book Your Session
+          Schedule a Session
         </a>
+
         <a
           href="#sessions"
-          class="border border-brand-50/40 px-8 py-3 rounded-full font-medium hover:bg-brand-50/10 transition"
+          class="border border-white/30 px-8 py-4 rounded-full font-medium hover:bg-white/10 transition"
         >
-          View Sessions
+          Explore Sessions
         </a>
       </div>
     </div>
 
-    <!-- Right Calendar Visual -->
-    <div class="flex items-start md:items-center justify-center md:justify-end">
-      <div class="w-full max-w-sm md:max-w-md h-[400px] md:h-[480px] rounded-3xl overflow-hidden shadow-2xl bg-brand-50 flex items-center justify-center">
-        <!-- Placeholder for Calendar/Booking visual -->
-        <span class="text-brand-700 font-semibold">[Calendar / Booking Visual Here]</span>
+    <!-- RIGHT: Calendar + Metrics -->
+    <div
+      class="min-h-[520px] flex flex-col justify-center gap-6"
+    >
+      <!-- Calendar -->
+<div
+  class="w-full bg-brand-50 rounded-3xl shadow-2xl p-6
+         h-[380px] md:h-[420px] flex flex-col"
+>
+  <p class="text-brand-700 font-semibold mb-4 text-center lg:text-left">
+    Availability Preview
+  </p>
+
+  <!-- Days -->
+  <div class="grid grid-cols-7 gap-2 text-center text-sm mb-2">
+    <span class="font-semibold">M</span>
+    <span class="font-semibold">T</span>
+    <span class="font-semibold">W</span>
+    <span class="font-semibold">T</span>
+    <span class="font-semibold">F</span>
+    <span class="font-semibold">S</span>
+    <span class="font-semibold">S</span>
+  </div>
+
+  <!-- Dates -->
+  <div class="grid grid-cols-7 gap-2 text-sm flex-1 content-start">
+    <!-- Muted previous days -->
+    <span class="p-3 rounded-xl bg-brand-500 text-white font-semibold">9</span>
+    <span class="p-3 rounded-xl bg-brand-500 text-white font-semibold">10</span>
+    <span class="p-3 rounded-xl bg-brand-100 text-brand-700 font-medium">11</span>
+
+    <!-- Available -->
+    <button class="p-3 rounded-xl bg-brand-100 text-brand-700 font-medium hover:bg-brand-500 hover:text-white transition">12</button>
+    <button class="p-3 rounded-xl bg-brand-100 text-brand-700 font-medium">13</button>
+
+    <!-- Selected -->
+    <button class="p-3 rounded-xl bg-brand-500 text-white font-semibold">14</button>
+
+    <!-- Available -->
+    <button class="p-3 rounded-xl bg-brand-100 text-brand-700 font-medium">15</button>
+
+    <!-- Next row -->
+    <button class="p-3 rounded-xl bg-brand-100 text-brand-700 font-medium">16</button>
+    <button class="p-3 rounded-xl bg-brand-100 text-brand-700 font-medium">17</button>
+    <button class="p-3 rounded-xl bg-brand-100 text-brand-700 font-medium">18</button>
+    <button class="p-3 rounded-xl bg-brand-100 text-brand-700 font-medium">19</button>
+    <button class="p-3 rounded-xl bg-brand-100 text-brand-700 font-medium">20</button>
+    <span class="p-3 text-brand-700/40">21</span>
+    <span class="p-3 rounded-xl bg-brand-100 text-brand-700 font-medium">22</span>
+
+    <!-- Third row (partial) -->
+    <button class="p-3 rounded-xl bg-brand-100 text-brand-700 font-medium">23</button>
+    <button class="p-3 rounded-xl bg-brand-100 text-brand-700 font-medium">24</button>
+    <button class="p-3 rounded-xl bg-brand-100 text-brand-700 font-medium">25</button>
+    <span class="p-3 text-brand-700/40">26</span>
+    <span class="p-3 text-brand-700/40">27</span>
+    <span class="p-3 rounded-xl bg-brand-500 text-white font-semibold">28</span>
+    <span class="p-3 rounded-xl bg-brand-500 text-white font-semibold">29</span>
+  </div>
+
+  <p class="mt-4 text-sm text-brand-700/70 text-center lg:text-left">
+    Select a date to continue booking
+  </p>
+</div>
+
+      <!-- Metrics -->
+      <div class="grid grid-cols-3 gap-4 text-brand-50 text-center">
+        <div class="bg-white/10 rounded-2xl p-5 backdrop-blur-sm">
+          <p class="text-3xl font-bold">10+</p>
+          <p class="text-sm text-brand-50/70">Years Experience</p>
+        </div>
+        <div class="bg-white/10 rounded-2xl p-5 backdrop-blur-sm">
+          <p class="text-3xl font-bold">500+</p>
+          <p class="text-sm text-brand-50/70">Clients Served</p>
+        </div>
+        <div class="bg-white/10 rounded-2xl p-5 backdrop-blur-sm">
+          <p class="text-3xl font-bold">95%</p>
+          <p class="text-sm text-brand-50/70">Retention Rate</p>
+        </div>
       </div>
     </div>
 
   </div>
 </section>
-  
 
 <script src="src/script.js"></script> <!-- Adjust path to your compiled JS -->
 </body>
