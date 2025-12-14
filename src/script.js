@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuBtn = document.getElementById('menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
   const menuLinks = header.querySelectorAll('nav a:not([href="#booking"]), nav button');
+  const bookBtn = header.querySelector('a[href="#booking"]'); // Book Now button
   
   let lastScrollTop = 0;
 
@@ -23,14 +24,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const hero = document.getElementById('home');
     if (hero) {
       const heroRect = hero.getBoundingClientRect();
+
+      // Nav links
       if (heroRect.bottom > 0) {
-        // Hero visible → white nav links
         menuLinks.forEach(link => link.classList.remove('text-brand-700'));
         menuLinks.forEach(link => link.classList.add('text-brand-50'));
       } else {
-        // Hero scrolled past → deep blue nav links
         menuLinks.forEach(link => link.classList.remove('text-brand-50'));
         menuLinks.forEach(link => link.classList.add('text-brand-700'));
+      }
+
+      // Book Now button text (always dark blue)
+      if (bookBtn) {
+        bookBtn.classList.remove('text-brand-50', 'text-brand-700');
+        bookBtn.classList.add('text-brand-700');
       }
     }
   });
