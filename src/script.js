@@ -13,3 +13,9 @@
       document.body.classList.remove('overflow-hidden');
     });
   });
+
+    document.addEventListener('alpine:init', () => {
+    Alpine.data('calendar', () => ({
+      selectedDay: new Date().getDate()
+    }));
+  });

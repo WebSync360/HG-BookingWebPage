@@ -110,15 +110,66 @@
       </div>
     </div>
 
-    <!-- RIGHT: Visual / Illustration -->
-    <div class="flex justify-center lg:justify-start">
-      <div class="w-full h-full max-w-md lg:max-w-none bg-brand-100 rounded-3xl shadow-2xl flex items-center justify-center p-6">
-        <!-- Placeholder for future content -->
-        <span class="text-brand-700 font-semibold text-center">
-          [Future Calendar / Session Preview / Booking Flow Here]
-        </span>
-      </div>
+<div class="w-full h-full max-w-md lg:max-w-none bg-brand-100 rounded-3xl shadow-2xl p-6 flex flex-col">
+
+  <!-- Title -->
+  <p class="text-brand-700 font-semibold mb-4 text-center lg:text-left">
+    Session Preview
+  </p>
+
+  <!-- Month Navigation -->
+  <div class="flex justify-between items-center mb-4">
+    <button class="text-brand-700/70 hover:text-brand-700 transition">&larr;</button>
+    <span class="font-semibold text-brand-700">December 2025</span>
+    <button class="text-brand-700/70 hover:text-brand-700 transition">&rarr;</button>
+  </div>
+
+  <!-- Weekday Labels -->
+  <div class="grid grid-cols-7 text-center text-sm font-semibold text-brand-700/80 mb-2">
+    <span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span>
+  </div>
+
+  <!-- Calendar Days -->
+  <div class="grid grid-cols-7 gap-2 flex-1">
+    <!-- Example: 28 days -->
+    <template x-for="day in 28">
+      <button
+        class="p-3 rounded-xl bg-brand-50 text-brand-700 font-medium hover:bg-brand-500 hover:text-white transition"
+        :class="{'bg-brand-500 text-white': selectedDay === day}"
+        @click="selectedDay = day"
+        x-text="day"
+      ></button>
+    </template>
+  </div>
+
+  <!-- Selected Date / Time Slots -->
+  <div class="mt-6">
+    <p class="text-sm text-brand-700/70 mb-2">
+      Available Time Slots
+    </p>
+    <div class="grid grid-cols-3 gap-2">
+      <button class="py-2 px-3 bg-brand-50 text-brand-700 rounded-xl font-medium hover:bg-brand-500 hover:text-white transition">
+        08:00 AM
+      </button>
+      <button class="py-2 px-3 bg-brand-50 text-brand-700 rounded-xl font-medium hover:bg-brand-500 hover:text-white transition">
+        10:00 AM
+      </button>
+      <button class="py-2 px-3 bg-brand-50 text-brand-700 rounded-xl font-medium hover:bg-brand-500 hover:text-white transition">
+        12:00 PM
+      </button>
+      <button class="py-2 px-3 bg-brand-50 text-brand-700 rounded-xl font-medium hover:bg-brand-500 hover:text-white transition">
+        02:00 PM
+      </button>
+      <button class="py-2 px-3 bg-brand-50 text-brand-700 rounded-xl font-medium hover:bg-brand-500 hover:text-white transition">
+        04:00 PM
+      </button>
+      <button class="py-2 px-3 bg-brand-50 text-brand-700 rounded-xl font-medium hover:bg-brand-500 hover:text-white transition">
+        06:00 PM
+      </button>
     </div>
+  </div>
+
+</div>
 
   </div>
 </section>
