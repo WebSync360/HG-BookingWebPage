@@ -77,27 +77,31 @@
     </nav>
 
     <!-- Mobile Toggle -->
-    <button class="md:hidden text-brand-50 text-2xl">
-      ☰
-    </button>
+    <button
+  id="menu-btn"
+  aria-label="Toggle Menu"
+  class="md:hidden text-brand-50 text-2xl focus:outline-none"
+>
+  ☰
+</button>
   </div>
 </header>
 
 <!-- Mobile Menu -->
 <div
   id="mobile-menu"
-  class="fixed inset-0 bg-brand-700/95 backdrop-blur-lg z-40
-         hidden flex-col items-center justify-center
-         text-brand-50 text-lg space-y-8 transition-opacity"
+  class="fixed top-[72px] left-0 w-full bg-brand-700/80
+         hidden flex-col items-start px-6 py-6
+         text-brand-50 space-y-5 shadow-xl md:hidden z-40"
 >
-  <a href="#about" class="hover:opacity-80">About</a>
-  <a href="#sessions" class="hover:opacity-80">Sessions</a>
-  <a href="#booking" class="hover:opacity-80">Book a Session</a>
-  <a href="#contact" class="hover:opacity-80">Contact</a>
+  <a href="#about" class="block w-full">About</a>
+  <a href="#sessions" class="block w-full">Sessions</a>
+  <a href="#booking" class="block w-full">Book a Session</a>
+  <a href="#contact" class="block w-full">Contact</a>
 
   <a
     href="#booking"
-    class="mt-6 bg-brand-50 text-brand-700 px-8 py-3 rounded-full font-semibold"
+    class="mt-4 inline-block bg-brand-50 text-brand-700 px-6 py-3 rounded-full font-semibold"
   >
     Book Now
   </a>
