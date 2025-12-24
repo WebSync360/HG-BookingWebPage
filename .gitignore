@@ -1,0 +1,27 @@
+# Environment variables
+.env
+.env.*
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE settings
+.vscode/
+.idea/
+
+# Secrets
+*.pem
+*.key
+credentials.json
+secrets.json
